@@ -1,0 +1,17 @@
+{
+  "name": "클래스 냥이",
+  "short_name": "클래스 냥이",
+  "description": "수업을 들은 시간만큼 고양이가 성장하는 공부 기록 앱",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8F5",
+  "theme_color": "#FFF8F5",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

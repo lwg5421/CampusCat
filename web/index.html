@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>클래스 냥이</title>
+  <meta name="description" content="수업을 들은 시간만큼 고양이가 성장하는 공부 기록 앱">
+  <meta name="theme-color" content="#FFF8F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1A120C" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="클래스 냥이">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">클래스 냥이</h1>
+  </header>
+
+  <main>
+    <!-- 홈 -->
+    <section id="view-home" class="view" aria-labelledby="title">
+      <div id="install-hint" class="card install-hint" hidden>
+        <div>
+          <strong>아이폰에서 앱처럼 쓰기</strong>
+          <p>Safari 아래쪽 <span class="share-icon" aria-label="공유">⬆︎</span> 공유 버튼을 누르고 <b>‘홈 화면에 추가’</b>를 선택하세요.
+            홈 화면 앱과 Safari 는 기록이 따로 저장되니 먼저 추가하고 쓰는 걸 추천해요.</p>
+        </div>
+        <button type="button" class="icon-btn" id="install-hint-close" aria-label="안내 닫기">✕</button>
+      </div>
+
+      <div class="card hello">
+        <button type="button" class="cat-btn" id="home-cat" aria-label="고양이 쓰다듬기"></button>
+        <div class="hello-text">
+          <div class="title-m" id="home-greeting"></div>
+          <div class="bubble" id="home-bubble" aria-live="polite"></div>
+          <div class="body-s muted" id="home-level"></div>
+          <div class="progress thin" role="progressbar" aria-label="경험치"><div class="bar" id="home-xp-bar"></div></div>
+        </div>
+      </div>
+
+      <div class="card timer">
+        <div class="label-l muted" id="home-status"></div>
+        <div class="clock" id="home-clock">00:00:00</div>
+        <div class="body-s primary" id="home-started" hidden></div>
+        <label class="field">
+          <span>과목 (선택)</span>
+          <input id="home-subject" type="text" maxlength="30" autocomplete="off" enterkeyhint="done">
+        </label>
+        <button type="button" class="btn filled big" id="home-start"><span aria-hidden="true">▶</span> 수업 시작</button>
+        <button type="button" class="btn tonal big" id="home-stop" hidden><span aria-hidden="true">■</span> 수업 종료</button>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <span class="title-s">오늘 공부한 시간</span>
+          <span class="body-s muted" id="home-goal"></span>
+        </div>
+        <div class="headline-s" id="home-today"></div>
+        <div class="progress" role="progressbar" aria-label="오늘 목표 달성률"><div class="bar" id="home-today-bar"></div></div>
+        <div class="body-s muted" id="home-today-hint"></div>
+      </div>
+    </section>
+
+    <!-- 기록 -->
+    <section id="view-records" class="view" hidden>
+      <div class="stats">
+        <div class="card stat"><div class="label-m muted">최근 7일</div><div class="title-m" id="stat-week"></div></div>
+        <div class="card stat"><div class="label-m muted">연속 공부</div><div class="title-m" id="stat-streak"></div></div>
+        <div class="card stat"><div class="label-m muted">총 공부</div><div class="title-m" id="stat-total"></div></div>
+      </div>
+      <div class="card">
+        <div class="title-s">최근 7일 공부 시간</div>
+        <div id="chart" class="chart" role="img" aria-label="최근 7일 공부 시간 그래프"></div>
+      </div>
+      <h2 class="title-m section-title">수업 기록</h2>
+      <p class="body-s muted" id="records-hint">기록을 누르면 삭제할 수 있어요</p>
+      <p class="empty" id="records-empty" hidden>아직 기록이 없어요.<br>홈에서 수업을 시작해 보세요!</p>
+      <ul class="session-list" id="records-list"></ul>
+    </section>
+
+    <!-- 고양이 -->
+    <section id="view-cat" class="view" hidden>
+      <div class="cat-stage">
+        <button type="button" class="cat-btn big" id="cat-big" aria-label="고양이 쓰다듬기"></button>
+        <div class="bubble meow" id="cat-meow" aria-live="polite" hidden></div>
+      </div>
+      <p class="label-s muted center">고양이를 눌러 보세요</p>
+      <div class="headline-s center" id="cat-name"></div>
+      <div class="center"><span class="pill" id="cat-stage-label"></span></div>
+
+      <div class="card xp-card">
+        <div class="row">
+          <span class="title-s">경험치</span>
+          <span class="label-l primary" id="cat-xp-value"></span>
+        </div>
+        <div class="progress" role="progressbar" aria-label="경험치"><div class="bar" id="cat-xp-bar"></div></div>
+        <div class="body-s muted" id="cat-xp-hint"></div>
+        <hr>
+        <p class="body-m" id="cat-stage-desc"></p>
+        <p class="label-m primary" id="cat-next-stage"></p>
+      </div>
+
+      <h2 class="title-m section-title">진화 단계</h2>
+      <div class="stage-row" id="cat-stages"></div>
+
+      <h2 class="title-m section-title">털 색</h2>
+      <div class="chips" id="cat-skins" role="radiogroup" aria-label="털 색"></div>
+    </section>
+
+    <!-- 설정 -->
+    <section id="view-settings" class="view" hidden>
+      <h2 class="section-header">고양이</h2>
+      <button type="button" class="list-row" id="settings-name">
+        <span class="body-l">이름</span><span class="body-m primary" id="settings-name-value"></span>
+      </button>
+
+      <h2 class="section-header">공부 목표</h2>
+      <div class="list-row static">
+        <label class="body-l" for="settings-goal">하루 목표 시간</label>
+        <span class="body-m primary" id="settings-goal-value"></span>
+      </div>
+      <div class="slider-wrap">
+        <input type="range" id="settings-goal" min="30" max="480" step="30">
+      </div>
+
+      <h2 class="section-header">데이터</h2>
+      <button type="button" class="list-row" id="settings-export">
+        <span><span class="body-l">백업 파일로 내보내기</span><span class="body-s muted block">기기를 바꿀 때 기록을 옮길 수 있어요</span></span>
+      </button>
+      <button type="button" class="list-row" id="settings-import">
+        <span class="body-l">백업 파일 가져오기</span>
+      </button>
+      <input type="file" id="settings-import-file" accept="application/json,.json" hidden>
+      <button type="button" class="list-row" id="settings-reset">
+        <span><span class="body-l danger">모든 기록 초기화</span><span class="body-s muted block">수업 기록과 레벨이 모두 사라져요</span></span>
+      </button>
+
+      <h2 class="section-header">정보</h2>
+      <div class="list-row static">
+        <span class="body-l">버전</span><span class="body-m primary" id="settings-version"></span>
+      </div>
+      <p class="body-s muted note">
+        기록은 이 기기의 브라우저에만 저장되고 안드로이드 앱과는 따로 관리돼요.
+        아이폰 웹앱은 정해진 시간에 울리는 수업 알림을 보낼 수 없어요.
+      </p>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="화면 선택">
+    <a href="#home" class="tab" data-tab="home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10,20v-6h4v6h5v-8h3L12,3 2,12h3v8z"/></svg><span>홈</span>
+    </a>
+    <a href="#records" class="tab" data-tab="records">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13,3c-4.97,0 -9,4.03 -9,9L1,12l3.89,3.89 0.07,0.14L9,12L6,12c0,-3.87 3.13,-7 7,-7s7,3.13 7,7 -3.13,7 -7,7c-1.93,0 -3.68,-0.79 -4.94,-2.06l-1.42,1.42C8.27,19.99 10.51,21 13,21c4.97,0 9,-4.03 9,-9s-4.03,-9 -9,-9zM12,8v5l4.28,2.54 0.72,-1.21 -3.5,-2.08L13.5,8L12,8z"/></svg><span>기록</span>
+    </a>
+    <a href="#cat" class="tab" data-tab="cat">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2,9.5a2.5,2.5 0,1 0,5 0a2.5,2.5 0,1 0,-5 0z M6.5,5.5a2.5,2.5 0,1 0,5 0a2.5,2.5 0,1 0,-5 0z M12.5,5.5a2.5,2.5 0,1 0,5 0a2.5,2.5 0,1 0,-5 0z M17,9.5a2.5,2.5 0,1 0,5 0a2.5,2.5 0,1 0,-5 0z M17.34,14.86c-0.87,-1.02 -1.6,-1.89 -2.48,-2.91 -0.46,-0.54 -1.05,-1.08 -1.75,-1.32 -0.11,-0.04 -0.22,-0.07 -0.33,-0.09 -0.25,-0.04 -0.52,-0.04 -0.78,-0.04s-0.53,0 -0.79,0.05c-0.11,0.02 -0.22,0.05 -0.33,0.09 -0.7,0.24 -1.28,0.78 -1.75,1.32 -0.87,1.02 -1.6,1.89 -2.48,2.91 -1.31,1.31 -2.92,2.76 -2.62,4.79 0.29,1.02 1.02,2.03 2.33,2.32 0.73,0.15 3.06,-0.44 5.54,-0.44h0.18c2.48,0 4.81,0.58 5.54,0.44 1.31,-0.29 2.04,-1.31 2.33,-2.32 0.31,-2.04 -1.3,-3.49 -2.61,-4.8z"/></svg><span>고양이</span>
+    </a>
+    <a href="#settings" class="tab" data-tab="settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z"/></svg><span>설정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="dialog">
+    <form method="dialog">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-message"></p>
+      <label class="field" id="dialog-field" hidden>
+        <span id="dialog-field-label"></span>
+        <input id="dialog-input" type="text" autocomplete="off">
+      </label>
+      <div class="dialog-actions" id="dialog-actions"></div>
+    </form>
+  </dialog>
+</body>
+</html>
