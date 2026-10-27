@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 박사 냥이: 학사모 + 안경 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillAlpha="0.18"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M32,63 a11,11 0,1 0,22,0 a11,11 0,1 0,-22,0 Z M66,63 a11,11 0,1 0,22,0 a11,11 0,1 0,-22,0 Z"
+        android:strokeColor="#FF3B2F2A"
+        android:strokeWidth="2.2" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,61 Q60,57 66,61 M32,61 L19,58 M88,61 L101,58"
+        android:strokeColor="#FF3B2F2A"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2" />
+    <path
+        android:fillColor="#FF33333D"
+        android:pathData="M38,20 L38,31 Q60,39 82,31 L82,20 Z" />
+    <path
+        android:fillColor="#FF24242C"
+        android:pathData="M60,5 L102,17 L60,29 L18,17 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M60,17 L94,21 L94,33"
+        android:strokeColor="#FFFFC83D"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.8" />
+    <path
+        android:fillColor="#FFFFC83D"
+        android:pathData="M57.8,17 a2.2,2.2 0,1 0,4.4,0 a2.2,2.2 0,1 0,-4.4,0 Z M91.5,33 L96.5,33 L97.5,41 L90.5,41 Z" />
+</vector>

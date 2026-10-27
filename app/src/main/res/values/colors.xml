@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 치즈냥 오렌지를 시드로 한 Material 3 색 역할. 다크 모드 값은 values-night/colors.xml. -->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="md_primary">#8F4C00</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#FFDCC2</color>
+    <color name="md_on_primary_container">#2F1500</color>
+    <color name="md_secondary">#745944</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#FCDCC5</color>
+    <color name="md_on_secondary_container">#2A1708</color>
+    <color name="md_tertiary">#5C6237</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_tertiary_container">#E1E7B1</color>
+    <color name="md_on_tertiary_container">#191E00</color>
+    <color name="md_background">#FFF8F5</color>
+    <color name="md_on_background">#221A14</color>
+    <color name="md_surface">#FFF8F5</color>
+    <color name="md_on_surface">#221A14</color>
+    <color name="md_surface_variant">#F3DFD2</color>
+    <color name="md_on_surface_variant">#52443B</color>
+    <color name="md_outline">#84746A</color>
+    <color name="md_outline_variant">#D7C3B7</color>
+    <color name="md_surface_container_lowest">#FFFFFF</color>
+    <color name="md_surface_container_low">#FFF1EA</color>
+    <color name="md_surface_container">#FCEBE2</color>
+    <color name="md_surface_container_high">#F6E5DC</color>
+    <color name="md_surface_container_highest">#F0DFD7</color>
+    <color name="md_surface_dim">#E8D7CE</color>
+    <color name="md_surface_bright">#FFF8F5</color>
 </resources>

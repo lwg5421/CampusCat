@@ -1,3 +1,119 @@
 <resources>
-    <string name="app_name">CampusCat</string>
+    <string name="app_name">클래스 냥이</string>
+
+    <!-- 하단 탭 -->
+    <string name="nav_home">홈</string>
+    <string name="nav_records">기록</string>
+    <string name="nav_cat">고양이</string>
+    <string name="nav_settings">설정</string>
+    <string name="title_records">수업 기록</string>
+    <string name="title_cat">내 고양이</string>
+    <string name="title_settings">설정</string>
+
+    <!-- 홈 -->
+    <string name="home_greeting">안녕, %1$s!</string>
+    <string name="home_level_summary">Lv.%1$d %2$s · 다음 레벨까지 %3$d XP</string>
+    <string name="home_level_summary_max">Lv.%1$d %2$s · 최고 레벨 달성!</string>
+    <string name="home_bubble_idle">오늘도 같이 공부하자냥!</string>
+    <string name="home_bubble_active">열심히 듣는 중이다냥…</string>
+    <string name="home_bubble_goal_done">오늘 목표 달성! 최고다냥!</string>
+    <string name="home_bubble_started">수업 시작! 집중하자냥 🐾</string>
+    <string name="home_status_idle">수업 대기 중</string>
+    <string name="home_status_active">수업 중</string>
+    <string name="home_status_active_subject">수업 중 · %1$s</string>
+    <string name="home_started_at">%1$s 시작 · +%2$d XP 쌓는 중</string>
+    <string name="home_subject_hint">과목 (선택)</string>
+    <string name="home_start">수업 시작</string>
+    <string name="home_stop">수업 종료</string>
+    <string name="home_today_title">오늘 공부한 시간</string>
+    <string name="home_today_goal">목표 %1$s</string>
+    <string name="home_today_remaining">목표까지 %1$s 남았어요</string>
+    <string name="home_today_done">오늘 목표를 달성했어요 🎉</string>
+    <string name="home_too_short">1분 미만의 수업은 기록되지 않아요</string>
+    <string name="home_session_saved">+%1$d XP! %2$s 동안 수고했어요</string>
+    <string name="home_long_title">수업이 너무 길어요</string>
+    <string name="home_long_message">수업이 %1$s 동안 이어지고 있어요. 종료 버튼을 깜빡하셨나요?</string>
+    <string name="home_long_save">그대로 저장</string>
+    <string name="home_long_discard">기록 버리기</string>
+    <string name="home_long_continue">계속하기</string>
+    <string name="home_discarded">수업 기록을 버렸어요</string>
+    <string name="level_up_title">레벨 업! 🎉</string>
+    <string name="level_up_message">%1$s의 레벨이 올랐어요! Lv.%2$d → Lv.%3$d</string>
+    <string name="level_up_evolved">%1$s(으)로 진화했어요!</string>
+    <string name="level_up_skins">새 털 색 해금: %1$s</string>
+    <string name="level_up_go_cat">고양이 보러 가기</string>
+    <string name="close">닫기</string>
+
+    <!-- 기록 -->
+    <string name="records_recent_week">최근 7일</string>
+    <string name="records_streak">연속 공부</string>
+    <string name="records_streak_value">%1$d일</string>
+    <string name="records_total">총 공부</string>
+    <string name="records_chart_title">최근 7일 공부 시간</string>
+    <string name="records_list_title">수업 기록</string>
+    <string name="records_list_hint">길게 누르면 기록을 삭제할 수 있어요</string>
+    <string name="records_empty">아직 기록이 없어요.\n홈에서 수업을 시작해 보세요!</string>
+    <string name="records_default_subject">수업</string>
+    <string name="records_xp">+%1$d XP</string>
+    <string name="records_today">오늘</string>
+    <string name="records_delete_title">이 기록을 삭제할까요?</string>
+    <string name="records_delete_message">%1$s · %2$s\n삭제하면 %3$d XP가 사라져요.</string>
+    <string name="records_deleted">기록을 삭제했어요</string>
+    <string name="delete">삭제</string>
+    <string name="cancel">취소</string>
+    <string name="chart_description">최근 7일 공부 시간 그래프</string>
+
+    <!-- 고양이 -->
+    <string name="cat_stage_level">Lv.%1$d · %2$s</string>
+    <string name="cat_xp_title">경험치</string>
+    <string name="cat_xp_value">%1$d / %2$d XP</string>
+    <string name="cat_xp_hint">다음 레벨까지 %1$s 더 공부하면 돼요 (1분 = 1 XP)</string>
+    <string name="cat_xp_hint_max">최고 레벨이에요! 그래도 함께 공부해 줄 거죠?</string>
+    <string name="cat_next_stage">Lv.%1$d이 되면 %2$s(으)로 진화해요</string>
+    <string name="cat_last_stage">마지막 단계까지 진화했어요!</string>
+    <string name="cat_stages_title">진화 단계</string>
+    <string name="cat_stage_unlock">Lv.%1$d~</string>
+    <string name="cat_skins_title">털 색</string>
+    <string name="cat_skin_locked">🔒 %1$s (Lv.%2$d)</string>
+    <string name="cat_tap_hint">고양이를 눌러 보세요</string>
+    <string-array name="cat_meows">
+        <item>냥!</item>
+        <item>오늘 수업 재밌었냥?</item>
+        <item>졸리다냥… 5분만…</item>
+        <item>간식은 공부 끝나고 먹자냥</item>
+        <item>과제는 미리미리 하자냥!</item>
+        <item>골골골골…</item>
+        <item>출석 체크 했냥?</item>
+        <item>같이 있어서 좋다냥 💛</item>
+    </string-array>
+
+    <!-- 설정 -->
+    <string name="settings_section_cat">고양이</string>
+    <string name="settings_name">이름</string>
+    <string name="settings_name_dialog_title">고양이 이름</string>
+    <string name="settings_name_hint">이름 (최대 12자)</string>
+    <string name="settings_section_goal">공부 목표</string>
+    <string name="settings_goal">하루 목표 시간</string>
+    <string name="settings_section_reminder">알림</string>
+    <string name="settings_reminder">수업 시작 알림</string>
+    <string name="settings_reminder_desc">매일 정해진 시간에 고양이가 불러 줘요</string>
+    <string name="settings_reminder_time">알림 시간</string>
+    <string name="settings_reminder_on">매일 %1$s에 알려 드릴게요</string>
+    <string name="settings_reminder_denied">알림 권한이 없어서 알림을 보낼 수 없어요</string>
+    <string name="settings_section_data">데이터</string>
+    <string name="settings_reset">모든 기록 초기화</string>
+    <string name="settings_reset_desc">수업 기록과 레벨이 모두 사라져요</string>
+    <string name="settings_reset_title">정말 초기화할까요?</string>
+    <string name="settings_reset_message">모든 수업 기록과 경험치가 삭제되고 되돌릴 수 없어요.</string>
+    <string name="settings_reset_confirm">초기화</string>
+    <string name="settings_reset_done">모든 기록을 초기화했어요</string>
+    <string name="settings_section_info">정보</string>
+    <string name="settings_version">버전</string>
+    <string name="save">저장</string>
+
+    <!-- 알림 -->
+    <string name="reminder_channel_name">수업 시작 알림</string>
+    <string name="reminder_channel_desc">매일 정해진 시간에 수업 시작을 알려 줘요</string>
+    <string name="reminder_title">수업 시작할 시간이에요 🐾</string>
+    <string name="reminder_text">%1$s: 오늘도 같이 공부하자냥!</string>
 </resources>

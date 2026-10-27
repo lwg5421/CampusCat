@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 고양이 얼굴(외곽선, 귀 안쪽, 눈, 코, 입, 수염). 털 색과 상관없이 그대로 그린다. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#FFF7B5BD"
+        android:pathData="M27.5,38 L26.8,20 L37.5,31.5 Z M92.5,38 L93.2,20 L82.5,31.5 Z" />
+    <path
+        android:fillAlpha="0.55"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M41,79 a11,8.5 0,1 0,22,0 a11,8.5 0,1 0,-22,0 Z M57,79 a11,8.5 0,1 0,22,0 a11,8.5 0,1 0,-22,0 Z" />
+    <path
+        android:fillAlpha="0.45"
+        android:fillColor="#FFF48FA0"
+        android:pathData="M27.5,74 a5.5,5.5 0,1 0,11,0 a5.5,5.5 0,1 0,-11,0 Z M81.5,74 a5.5,5.5 0,1 0,11,0 a5.5,5.5 0,1 0,-11,0 Z" />
+    <path
+        android:fillColor="#FF2E2420"
+        android:pathData="M37.5,63 a5.5,7 0,1 0,11,0 a5.5,7 0,1 0,-11,0 Z M71.5,63 a5.5,7 0,1 0,11,0 a5.5,7 0,1 0,-11,0 Z"
+        android:strokeAlpha="0.6"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.4" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M43,60 a2,2 0,1 0,4,0 a2,2 0,1 0,-4,0 Z M77,60 a2,2 0,1 0,4,0 a2,2 0,1 0,-4,0 Z" />
+    <path
+        android:fillColor="#FFEF8597"
+        android:pathData="M56.5,72.5 Q60,70.5 63.5,72.5 Q62,75.5 60,76 Q58,75.5 56.5,72.5 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M60,76 L60,78.5 M53,78 Q56.5,83 60,78.5 Q63.5,83 67,78"
+        android:strokeColor="#FF2E2420"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.8" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M30,75 L11,71 M30,79 L11,81 M90,75 L109,71 M90,79 L109,81"
+        android:strokeAlpha="0.8"
+        android:strokeColor="#FF5A4A40"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.4" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M21.9,47 L23.8,14 Q24,10 26.5,13.1 L41.4,31.6 A44,38 0,0 1,78.6,31.6 L93.5,13.1 Q96,10 96.2,14 L98.1,47 A44,38 0,1 1,21.9,47 Z"
+        android:strokeColor="#FF4A3B32"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+</vector>
