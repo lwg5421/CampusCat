@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 새내기 냥이: 귀에 단 리본 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#FFE5484D"
+        android:pathData="M86,30 C80,20 70,22 72,30 C73,37 80,36 86,30 Z M86,30 C92,20 102,22 100,30 C99,37 92,36 86,30 Z"
+        android:strokeColor="#FFA8323A"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1" />
+    <path
+        android:fillColor="#FFC23940"
+        android:pathData="M82.4,30 a3.6,3.6 0,1 0,7.2,0 a3.6,3.6 0,1 0,-7.2,0 Z" />
+</vector>

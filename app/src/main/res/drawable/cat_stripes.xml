@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 줄무늬 스킨용 무늬. 반투명 검정이라 어떤 털 색 위에서도 어둡게 보인다. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillAlpha="0.16"
+        android:fillColor="#FF000000"
+        android:pathData="M55.5,28.6 L60,41 L64.5,28.6 Z M45.5,30.6 L50.5,40 L51,29.6 Z M74.5,30.6 L69.5,40 L69,29.6 Z M16.5,62 L29,65 L17,68 Z M103.5,62 L91,65 L103,68 Z" />
+</vector>
